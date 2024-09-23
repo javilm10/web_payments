@@ -1,70 +1,100 @@
-# Getting Started with Create React App
+# Sistema de Pago - React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Este proyecto es una aplicación web en **React.js** que permite realizar pagos utilizando **tarjeta de crédito** o **monedas**. Se conecta a una API que se encuentra en `http://localhost:8000` para procesar las transacciones.
 
-## Available Scripts
+## Características
 
-In the project directory, you can run:
+- **Pago con tarjeta**: Los usuarios pueden realizar pagos introduciendo la información de su tarjeta.
+- **Pago con monedas**: Opción para realizar pagos utilizando monedas virtuales.
+- **Validación de pagos**: La aplicación valida la información introducida por el usuario antes de realizar el pago.
+- **Comunicación con API**: La app envía solicitudes a una API REST alojada en `http://localhost:8000` para procesar las transacciones.
 
-### `npm start`
+## Requisitos
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Antes de empezar, asegúrate de tener los siguientes componentes instalados:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- **Node.js** (v14 o superior)
+- **npm** (v6 o superior) o **yarn**
 
-### `npm test`
+## Instalación
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+1. Clona este repositorio en tu máquina local:
 
-### `npm run build`
+   ```bash
+   git clone https://github.com/javilm10/web_payments.git
+   ```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+2. Dirígete a la carpeta del proyecto:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+   ```bash
+   cd web_payments
+   ```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+3. Instala las dependencias del proyecto:
 
-### `npm run eject`
+   ```bash
+   npm install
+   ```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+   O si prefieres usar **yarn**:
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+   ```bash
+   yarn install
+   ```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Uso
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### Ejecutar la aplicación localmente
+La API para este proyecto esta en este repositorio https://github.com/javilm10/api_payments.git
+1. Asegúrate de que la API está corriendo en `http://localhost:8000`.
+   
+   Puedes iniciar tu API ejecutando el servidor con el siguiente comando (dependiendo de tu entorno backend):
+   
+   ```bash
+   python manage.py runserver 8000
+   ```
+   (si usas Django) o el equivalente en tu framework backend.
 
-## Learn More
+2. Para iniciar la aplicación React en modo de desarrollo, ejecuta el siguiente comando:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+   ```bash
+   npm start
+   ```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+   O si usas **yarn**:
 
-### Code Splitting
+   ```bash
+   yarn start
+   ```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+3. Abre tu navegador y ve a `http://localhost:3000` para ver la aplicación en funcionamiento.
 
-### Analyzing the Bundle Size
+### Flujo de trabajo
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+- Selecciona el método de pago que deseas utilizar (tarjeta o monedas).
+- Completa los datos requeridos (tarjeta o la cantidad de monedas).
+- La aplicación enviará los datos a la API ubicada en `http://localhost:8000` y procesará la transacción.
+- Recibirás una confirmación si el pago fue exitoso o un mensaje de error si hubo algún problema.
 
-### Making a Progressive Web App
+## Construcción del proyecto
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+Para crear una versión optimizada para producción, ejecuta:
 
-### Advanced Configuration
+```bash
+npm run build
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+O si usas **yarn**:
 
-### Deployment
+```bash
+yarn build
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+Esto generará una carpeta `build` con los archivos listos para producción.
 
-### `npm run build` fails to minify
+## Licencia
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Este proyecto está licenciado bajo la licencia MIT. Para más detalles, consulta el archivo [LICENSE](LICENSE).
+```
+
+Este `README.md` proporciona información clara y completa sobre cómo instalar, usar, y contribuir al proyecto. Si tienes más detalles sobre la API o los métodos de pago, puedes añadirlos a las secciones correspondientes.

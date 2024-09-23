@@ -1,38 +1,101 @@
-.App {
-  text-align: center;
+/* Estilos generales */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+h1 {
+  font-size: 48px; /* Tamaño del texto */
+  font-weight: bold; /* Texto en negrita */
+  background: linear-gradient(90deg, #1e3c72, #982a86); /* Degradado de izquierda a derecha, azul oscuro a más claro */
+  -webkit-background-clip: text; /* Cortar el fondo con el texto en navegadores webkit */
+  -webkit-text-fill-color: transparent; /* Relleno del texto transparente */
+  text-align: center; /* Centrar el texto */
+  margin: 20px 0; /* Espacio alrededor del h1 */
+  font-family: 'Arial', sans-serif; /* Fuente personalizada */
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* Estilos del contenedor del formulario */
+form {
+  background-color: #fff;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 400px;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  margin: 20px;
+}
+
+/* Estilos para los labels */
+label {
+  margin-bottom: 15px;
+  font-weight: bold;
+  display: flex;
+  flex-direction: column;
+  color: #333;
+}
+
+/* Estilos para los campos de input */
+input[type="number"], select {
+  padding: 10px;
+  margin-top: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 14px;
+  background-color: #f9f9f9;
+  transition: border-color 0.3s ease;
+}
+input[type="text"], select {
+  padding: 10px;
+  margin-top: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 14px;
+  background-color: #f9f9f9;
+  transition: border-color 0.3s ease;
+}
+
+/* Efecto hover y focus en los inputs */
+input[type="number"]:hover, select:hover,
+input[type="number"]:focus, select:focus {
+  border-color: #007bff;
+  outline: none;
+}
+input[type="text"]:hover, select:hover,
+input[type="text"]:focus, select:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+/* Estilos del botón de submit */
+input[type="submit"] {
+  background-color: #007bff;
   color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 12px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 15px;
 }
 
-.App-link {
-  color: #61dafb;
+/* Efecto hover en el botón de submit */
+input[type="submit"]:hover  .overlay{
+  background-color: #0056b3;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* Estilos del contenedor de resultados */
+#result {
+  margin-top: 20px;
+  font-size: 14px;
+  color: #333;
+  border-radius: 5px;
 }

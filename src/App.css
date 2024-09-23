@@ -9,7 +9,20 @@ body {
   align-items: center;
   height: 100vh;
 }
-
+.result-container .valid{
+  color: green;
+  margin-bottom: 15px;
+  font-weight: bold;
+  display: flex;
+  flex-direction: column;
+}
+.result-container .invalid{
+  color: red;
+  margin-bottom: 15px;
+  font-weight: bold;
+  display: flex;
+  flex-direction: column;
+}
 h1 {
   font-size: 48px; /* Tamaño del texto */
   font-weight: bold; /* Texto en negrita */

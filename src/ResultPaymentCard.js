@@ -3,7 +3,7 @@ function ResultPaymentCard({ cardNumber, isValidCard }) {
   if (cardNumber) {
     return (
       <p class={isValidCard ? "valid" : "invalid"}>
-        The card {cardNumber || ""} is {isValidCard ? "valid" : "invalid"}
+        La tarjeta {cardNumber || ""} es {isValidCard ? "correcta" : "incorrecta"}
       </p>
     );
   }
